@@ -1,0 +1,24 @@
+#slider{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid black;
+    }
+.sliderScreen{
+    display: none;
+}
+.SliderPoint{
+    background-color: white;
+}
+.SliderPoint:hover{
+    background-color: #00ebff;
+}
+.SliderPointBorder{
+    border: 2px solid black;
+}
+.SliderPointBRadius{
+    border-radius: 50%;
+}
+.SliderPointActive {
+    background-color: chartreuse;
+}

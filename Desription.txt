@@ -1,0 +1,46 @@
+Простой вариант слайдера. Написан на чистом JavaScript, без применения сторонних библиотек.
+Атрибуты контейнера слайдера:
+ID: slider;
+class: slider;
+width: ширина;
+hieght: высота;
+time: время показа слайда;
+orientation: вариант показа точек. 'H'или 'h' горизонтально внизу, 'v' или любое другое значение- вертикально справа.
+pointSize: размер точки в пикселах;
+type: тип точки. 'circle' - круг, 'square' - квадрат
+
+В тег 'img' добавлен атрибут 'href' - ссылка для открытия окна по клику.
+Css:
+#slider{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid black;
+    }
+.sliderScreen{
+    display: none; - используется для тега 'img'
+}
+.SliderPoint{
+    background-color: white; - фон точки в неактивном состоянии
+}
+.SliderPoint:hover{
+    background-color: #00ebff; - фон точки при наведении курсором
+}
+.SliderPointBorder{
+    border: 2px solid black; - стиль границы точки
+}
+.SliderPointBRadius{
+    border-radius: 50%; - стиль границы для круга
+}
+.SliderPointActive {
+    background-color: chartreuse; - цвет фона для точки показываемого слайда
+}
+
+
+Пример:
+<div id="slider" class="slider" width='400' height="300" time="5000" orientation="h" pointSize="15" type="circle">
+        <img src="img/google.jpg" alt="fon2" href="http://www.google.ru" class="sliderScreen">
+        <img src="img/yandex.png" alt="fon2" href="http://www.yandex.ru" class="sliderScreen">
+        <img src="img/mail.jpg" alt="fon2" href="http://www.mail.ru" class="sliderScreen">
+        <img src="img/gismeteo.png" alt="fon2" href="http://www.gismeteo.ru" class="sliderScreen">
+    </div>
